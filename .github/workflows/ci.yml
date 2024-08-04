@@ -20,7 +20,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x, 22.x]
+        node-version: [20.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -32,19 +32,19 @@ jobs:
         cache: 'npm'
     - name: Install dependencies
       run: |
-        cd react-testing
+        #cd react-testing
         npm ci 
         #npm ci is like npm install but a bit faster
     - name: Build the app
       run: |
-        cd react-testing
+        #cd react-testing
         npm run build
     - name: Run unit tests
       run: |
-        cd react-testing
+        #cd react-testing
         npm run test
     - name: Start the App
       run: |
-        cd react-testing
+        #cd react-testing
         npm start &
         npx wait-on --timout 60000
