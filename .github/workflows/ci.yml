@@ -3,9 +3,9 @@
 
 name: CI
 env: 
-  SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }},
-  SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }},
-  SCREENER_API_KEY: ${{ secrets.SCREENER_API_KEY }},
+  SAUCE_ACCESS_KEY: ${{ vars.SAUCE_ACCESS_KEY }},
+  SAUCE_USERNAME: ${{ vars.SAUCE_USERNAME }},
+  SCREENER_API_KEY: ${{ vars.SCREENER_API_KEY }},
 
 on:
   push:
